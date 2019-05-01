@@ -1,0 +1,17 @@
+{
+  "name": "node-tutorial",
+  "version": "1.0.0",
+  "description": "Tutorial on Nodejs",
+  "main": "npm.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jerry Doran",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
