@@ -2,7 +2,7 @@
   "name": "node-tutorial",
   "version": "1.0.0",
   "description": "Tutorial on Nodejs",
-  "main": "npm.js",
+  "main": "express.js",
   "directories": {
     "example": "example"
   },
@@ -12,6 +12,8 @@
   "author": "Jerry Doran",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
     "lodash": "^4.17.11"
   }
 }
