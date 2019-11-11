@@ -2,7 +2,7 @@
   "name": "node-tutorial",
   "version": "1.0.0",
   "description": "Tutorial on Nodejs",
-  "main": "express.js",
+  "main": "app.js",
   "directories": {
     "example": "example"
   },
