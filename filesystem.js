@@ -1,16 +1,25 @@
+// NODE CORE MODULE
 const fs = require('fs');
 
+// ASYNC READING FILE - NON BLOCKING (OTHER CODE CAN KEEP RUNNING WHILE
+// THIS BLOCK OF CODE IS RUNNING)
+// fs.readFile('example.txt', 'utf8', (err, data) => {
+//   console.log(data);
+// });
+
+// console.log('test');
+
 // CREATE A FILE
-// fs.writeFile('example.txt', 'This is an example', err => {
+// fs.writeFile('exampleFile.txt', 'More stuff to read', err => {
 //   if (err) {
 //     console.log(err);
 //   } else {
 //     console.log('File successfully created');
-//     fs.readFile('example.txt', 'utf8', (err, file) => {
+//     fs.readFile('exampleFile.txt', 'utf8', (err, data) => {
 //       if (err) {
 //         console.log(err);
 //       } else {
-//         console.log(file);
+//         console.log(data);
 //       }
 //     });
 //   }
@@ -78,34 +87,34 @@ const fs = require('fs');
 // });
 
 // DELETE FILE AND DIRECTORY
-// fs.unlink(__dirname + '/tutorial/example.txt', err => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     fs.rmdir('tutorial', err => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         console.log('successfully deleted folder');
-//       }
-//     });
-//   }
-// });
-
-// DELETE MULTIPLE FILES IN A FOLDER
-fs.readdir('example', (err, files) => {
+fs.unlink(__dirname + '/tutorial/example.txt', err => {
   if (err) {
     console.log(err);
   } else {
-    files.forEach(file => {
-      fs.unlink(__dirname + '/example/' + file, err => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log('successfully deleted file');
-        }
-      });
+    fs.rmdir('tutorial', err => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('successfully deleted folder');
+      }
     });
-    console.log(files);
   }
 });
+
+// DELETE MULTIPLE FILES IN A FOLDER
+// fs.readdir('example', (err, files) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     files.forEach(file => {
+//       fs.unlink(__dirname + '/example/' + file, err => {
+//         if (err) {
+//           console.log(err);
+//         } else {
+//           console.log('successfully deleted file');
+//         }
+//       });
+//     });
+//     console.log(files);
+//   }
+// });
