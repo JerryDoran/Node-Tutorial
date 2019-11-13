@@ -1,5 +1,5 @@
-const http = require('http');
-const fs = require('fs');
+const http = require("http");
+const fs = require("fs");
 
 // const server = http.createServer((req, res) => {
 //   if (req.url === '/') {
@@ -15,8 +15,8 @@ const fs = require('fs');
 // SERVE UP STATIC FILES
 const server = http.createServer((req, res) => {
   // Read static HTML file
-  const readStream = fs.createReadStream('./static/index.html');
-  res.writeHead(200, { 'Content-type': 'text/html' });
+  const readStream = fs.createReadStream("./static/index.html");
+  res.writeHead(200, { "Content-type": "text/html" });
 
   // Read static text file
   // const readStream = fs.createReadStream('./static/example.txt', 'utf8');
